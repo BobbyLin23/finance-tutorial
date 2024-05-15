@@ -16,5 +16,10 @@ Thanks to [Code with Antonio](https://www.codewithantonio.com) for the content.
 - [x] Create the project, add Shadcn UI
 - [x] Add Clerk to the project
 - [x] Hono.js Setup
-- [ ] Header Component
-- [ ] DB Setup with Drizzle ORM
+- [x] Header Component
+- [x] DB Setup with Drizzle ORM
+- [ ] Accounts GET API
+- [ ] Accounts POST API
+- [ ] Data Table
+- [ ] Accounts bulk Delete
+- [ ] Accounts edit
