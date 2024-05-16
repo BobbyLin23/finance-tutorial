@@ -11,6 +11,9 @@ Thanks to [Code with Antonio](https://www.codewithantonio.com) for the content.
 - Clerk
 - Drizzle ORM
 - Hono.js
+- Zustand
+- React Query
+- React Use
 
 ## Todo
 - [x] Create the project, add Shadcn UI
@@ -18,7 +21,7 @@ Thanks to [Code with Antonio](https://www.codewithantonio.com) for the content.
 - [x] Hono.js Setup
 - [x] Header Component
 - [x] DB Setup with Drizzle ORM
-- [ ] Accounts GET API
+- [x] Accounts GET API
 - [ ] Accounts POST API
 - [ ] Data Table
 - [ ] Accounts bulk Delete
