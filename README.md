@@ -22,7 +22,20 @@ Thanks to [Code with Antonio](https://www.codewithantonio.com) for the content.
 - [x] Header Component
 - [x] DB Setup with Drizzle ORM
 - [x] Accounts GET API
-- [ ] Accounts POST API
-- [ ] Data Table
-- [ ] Accounts bulk Delete
+- [x] Accounts POST API
+- [x] Data Table
+- [x] Accounts bulk Delete
 - [ ] Accounts edit
+- [ ] Categories API + UI
+- [ ] Transactions API
+- [ ] Transactions hooks
+- [ ] Transactions form
+- [ ] Transactions page
+- [ ] Transactions CSV import
+- [ ] Transactions account select
+- [ ] Summary API
+- [ ] Dashboard card
+- [ ] Dashboard chart
+- [ ] Dashboard pie
+- [ ] Date & account filter
+- [ ] Deployment
