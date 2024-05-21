@@ -47,7 +47,6 @@ export const AccountForm = ({
   })
 
   const handleDelete = () => {
-    console.log('delete')
     onDelete?.()
   }
 
