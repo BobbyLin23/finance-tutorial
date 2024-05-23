@@ -1,8 +1,9 @@
 import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
+import { HTTPException } from 'hono/http-exception'
 
 import accounts from '@/app/api/[[...route]]/accounts'
-import { HTTPException } from 'hono/http-exception'
+import categories from '@/app/api/[[...route]]/categories'
 
 export const runtime = 'edge'
 
@@ -16,7 +17,7 @@ app.onError((e, c) => {
   return c.json({ error: 'Internal Error' }, 500)
 })
 
-const routes = app.route('/accounts', accounts)
+const routes = app.route('/accounts', accounts).route('/categories', categories)
 
 export const GET = handle(app)
 export const POST = handle(app)
