@@ -25,9 +25,9 @@ Thanks to [Code with Antonio](https://www.codewithantonio.com) for the content.
 - [x] Accounts POST API
 - [x] Data Table
 - [x] Accounts bulk Delete
-- [ ] Accounts edit
-- [ ] Categories API + UI
-- [ ] Transactions API
+- [x] Accounts edit
+- [x] Categories API + UI
+- [x] Transactions API
 - [ ] Transactions hooks
 - [ ] Transactions form
 - [ ] Transactions page
