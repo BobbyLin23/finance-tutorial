@@ -2,24 +2,25 @@
 
 import { Loader2, Plus } from 'lucide-react'
 
+import { columns } from '@/app/(dashboard)/transactions/columns'
+import { useNewTransaction } from '@/features/transactions/hooks/use-new-transaction'
+import { useGetTransactions } from '@/features/transactions/api/use-get-transactions'
+import { useBulkDeleteTransactions } from '@/features/transactions/api/use-bulk-delete-transactions'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { useNewAccounts } from '@/features/accounts/hooks/use-new-accounts'
-import { columns } from '@/app/(dashboard)/accounts/columns'
 import { DataTable } from '@/components/data-table'
-import { useGetAccounts } from '@/features/accounts/api/use-get-accounts'
 import { Skeleton } from '@/components/ui/skeleton'
-import { useBulkDeleteAccounts } from '@/features/accounts/api/use-bulk-delete-accounts'
 
-export default function AccountsPage() {
-  const newAccount = useNewAccounts()
-  const deleteAccounts = useBulkDeleteAccounts()
-  const accountsQuery = useGetAccounts()
-  const accounts = accountsQuery.data || []
+export default function TransactionPage() {
+  const newTransaction = useNewTransaction()
+  const deleteTransactions = useBulkDeleteTransactions()
+  const transactionsQuery = useGetTransactions()
+  const transactions = transactionsQuery.data || []
 
-  const isDisabled = accountsQuery.isLoading || deleteAccounts.isPending
+  const isDisabled = transactionsQuery.isLoading || deleteTransactions.isPending
 
-  if (accountsQuery.isLoading)
+  if (transactionsQuery.isLoading)
     return (
       <div className="mx-auto -mt-24 w-full max-w-screen-2xl pb-10">
         <Card className="border-none drop-shadow-sm">
@@ -39,8 +40,10 @@ export default function AccountsPage() {
     <div className="mx-auto -mt-24 w-full max-w-screen-2xl pt-10">
       <Card className="border-none drop-shadow-sm">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
-          <CardTitle className="line-clamp-1 text-xl">Accounts Page</CardTitle>
-          <Button onClick={newAccount.onOpen} size="sm">
+          <CardTitle className="line-clamp-1 text-xl">
+            Transaction History
+          </CardTitle>
+          <Button onClick={newTransaction.onOpen} size="sm">
             <Plus className="mr-2 size-4" />
             Add New
           </Button>
@@ -48,11 +51,11 @@ export default function AccountsPage() {
         <CardContent>
           <DataTable
             columns={columns}
-            data={accounts}
+            data={transactions}
             filterKey="name"
             onDelete={(rows) => {
               const ids = rows.map((row) => row.original.id)
-              deleteAccounts.mutate({ ids })
+              deleteTransactions.mutate({ ids })
             }}
             disabled={isDisabled}
           />
