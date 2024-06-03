@@ -36,12 +36,12 @@ export const AmountInput = ({
     <div className="relative">
       <TooltipProvider>
         <Tooltip delayDuration={100}>
-          <TooltipTrigger>
+          <TooltipTrigger asChild>
             <button
               type="button"
               onClick={onReverseValue}
               className={cn(
-                'absolute left-1.5 top-7 flex items-center justify-center rounded-md ' +
+                'absolute left-1.5 top-1.5 flex items-center justify-center rounded-md ' +
                   'bg-slate-400 p-2 transition hover:bg-slate-500',
                 isIncome && 'bg-emerald-500 hover:bg-emerald-600',
                 isExpense && 'bg-rose-500 hover:bg-rose-600',

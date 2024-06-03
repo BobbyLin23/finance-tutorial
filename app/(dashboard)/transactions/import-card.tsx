@@ -74,7 +74,7 @@ export const ImportCard = ({ data, onCancel, onSubmit }: Props) => {
             ? []
             : transformedRow
         })
-        .filter((row) => row.length),
+        .filter((row) => row.length > 0),
     }
 
     const arrayOfData = mappedData.body.map((row) => {

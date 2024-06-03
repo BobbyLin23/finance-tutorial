@@ -81,7 +81,7 @@ export const TransactionForm = ({
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit} className="space-y-4 pt-2">
+      <form onSubmit={handleSubmit} className="space-y-4 pt-4">
         <FormField
           name="date"
           control={form.control}

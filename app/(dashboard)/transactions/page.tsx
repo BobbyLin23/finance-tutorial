@@ -61,7 +61,7 @@ export default function TransactionPage() {
     const accountId = await confirm()
 
     if (!accountId) {
-      return toast.error('Please select an account')
+      return toast.error('Please select an account to continue')
     }
 
     const data = values.map((value) => ({
