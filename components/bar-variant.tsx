@@ -11,7 +11,7 @@ import { CustomTooltip } from '@/components/custom-tooltip'
 
 type Props = {
   data: {
-    data: string
+    date: string
     income: number
     expenses: number
   }[]

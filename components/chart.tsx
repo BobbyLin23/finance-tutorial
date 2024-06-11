@@ -22,7 +22,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 type Props = {
   data?: {
-    data: string
+    date: string
     income: number
     expenses: number
   }[]
